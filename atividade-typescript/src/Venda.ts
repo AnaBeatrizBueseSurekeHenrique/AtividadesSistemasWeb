@@ -37,10 +37,10 @@ export default class Venda{
         this._produtos = produtos;
     }
     calcularTotal() : number{
-        let qntd = 0;
+        let somaV = 0;
         for(let i = 0; i < this._produtos.length; i++){
-            qntd += this._produtos[i].valor;
+            somaV += this._produtos[i].valor;
         }
-        return qntd;
+        return somaV;
     }
 }
