@@ -1,0 +1,36 @@
+node -v
+npm init --Y
+npm i typescript
+npm i ts-node-dev
+npm i -D @types/node
+npm i --save-dev tsconfig-path
+tsc --init
+npm i
+
+npm i express
+npm i cors
+npm i express-async-errors --force
+npm i -D @types/express --force
+npm i -D @types/cors --force
+
+npm i typeorm@0.2.45 --force
+npm i reflect-metadata pg --force
+
+docker run --name postgres -e POSTGRES_PASSWORD=docker -p 5433:5432 -d postgres
+
+npm run typeorm migration:run
+npm run typeorm migration:create -- -n CreateProducts
+npm run typeorm migration:create -- -n CreateUsers
+
+npm i bcryptjs
+npm i -D @types/bcryptjs
+
+npm i jsonwebtoken
+npm i -D @types/jsonwebtoken
+
+https://www.md5hashgenerator.com/
+http://jwt.io/
+ 
+
+npm i multer
+npm i -D @types/multer
