@@ -16,8 +16,6 @@ export default class ResetPasswordService{
         const userTokenRepository = getCustomRepository(UserTokensRepository);
         const userToken = await userTokenRepository.findByToken(token);
         if(!userToken){
-                    console.log("aaa")
-
             throw new AppError('Token does not exist.');
         }
         const user = await userRepository.findById(userToken.user_id);
