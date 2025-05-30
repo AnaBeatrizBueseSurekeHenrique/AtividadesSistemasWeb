@@ -42,3 +42,20 @@ npm i nodemailer
 npm i -D @types/nodemailer
 
 npm i handlebars
+
+npm run typeorm migrations:create -- -n CreateCustomers
+npm run typeorm migration:run
+
+npm run typeorm migrations:create -- -n CreateOrders
+npm run typeorm migration:run
+
+npm run typeorm migrations:create -- -n AddCustumerIdToOrders
+npm run typeorm migration:run
+
+npm run typeorm migrations:create -- -n CreateOrdersProducts
+npm run typeorm migration:run
+
+npm run typeorm migrations:create -- -n AddOrderIdToOrdersProduct
+npm run typeorm migration:run
+
+npm run typeorm migrations:create -- -n AddProductIdToOrdersProduct
